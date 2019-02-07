@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Hero } from "../hero";
 
 //metadata
 @Component({
@@ -8,7 +9,10 @@ import { Component, OnInit } from "@angular/core";
 })
 //always EXPORT class so the component can be IMPORTED later
 export class HeroesComponent implements OnInit {
-  hero = "Soldier 76";
+  hero: Hero = {
+    id: 1,
+    name: "Soldier 76"
+  };
   constructor() {}
 
   //called on create. Good for initialization logic
